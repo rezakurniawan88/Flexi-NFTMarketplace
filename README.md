@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flexi : NFT Marketplace
 
-## Getting Started
+Flexi is a decentralized NFT marketplace built with modern web3 technologies, allowing users to mint, buy, sell, and manage NFTs seamlessly.
 
-First, run the development server:
+![Flexi NFT Marketplace Preview](/public/preview/homepage.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Home Page (List All NFTs)
+    - Browse all NFTs in a responsive layout
+    - Display NFT metadata: name, image, price, owner, and status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Wallet Authentication
+    - Register/Login using Web3 Wallets via RainbowKit integration
+    - Supports MetaMask, Coinbase Wallet, WalletConnect, and more
+    - Session management with Next-Auth
 
-## Learn More
+- NFT Creation
+    - Mint new NFTs with image/file upload using IPFS (Pinata)
+    - Custom metadata fields: name, description, attributes
+    - ERC-721 standard compliance with preview before minting
 
-To learn more about Next.js, take a look at the following resources:
+- NFT Management
+    - Change NFT status (For Sale/Not for Sale)
+    - Update listing price with transaction confirmation
+    - Owner-only controls with wallet verification
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- NFT Purchases
+    - Buy NFTs directly with crypto wallet
+    - Integrated with Ethers.js and Wagmi for secure transactions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 💻 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Core Framework**
+- Next.js (App Router) - Full-stack framework
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Blockchain Integration**
+- Ethers.js - Smart contract interactions
+- Wagmi & Viem - React hooks for Ethereum
+- RainbowKit - Wallet connection UI
+
+**Backend & Database**
+- Prisma - ORM for database management
+- PostgreSQL - Relational database (recommended)
+
+**Web3 Storage**
+- Pinata/IPFS - NFT metadata and file storage
+
+**UI & Styling**
+- shadcn/ui - Accessible UI components
+- Tailwind CSS - Utility-first styling
+
+**State & Data**
+- TanStack React Query - Server state management
+- Zustand - Client state management
+
+**Authentication**
+- Next-Auth - Authentication framework
+- Web3 wallet-based sessions
+
+## 🛠️ Installation
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/rezakurniawan88/Flexi-NFTMarketplace.git
+   cd Flexi-NFTMarketplace
+   ```
+
+2. Install dependencies :
+   ```bash
+   npm install
+   ```
+
+3. Env configuration :
+    ```bash
+    cp .env.example .env
+    ```
+
+4. Setup environment variables
+    ```bash
+    You must have :
+    1. Supabase database
+    2. Pinata account
+    3. Infura account
+    ```
+
+5. Database setup :
+    ```bash
+    npx prisma migrate dev
+    ```
+
+6. Run development server :
+    ```bash
+    npm run dev
+    ```
+
+7. Open http://localhost:3000 in your browser to see the application.

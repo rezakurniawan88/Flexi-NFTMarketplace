@@ -212,8 +212,8 @@ export default function ProfilePage() {
         <main className="w-full h-full bg-[#0a0615]">
             <Header />
             <div className="bg-[#0a0615] w-full">
-                <div className="relative bg-gradient-to-r from-purple-500 via-purple-700 to-purple-900 w-full h-52 sm:h-72">
-                    <div className="absolute bottom-0 left-6 -mb-16 w-40 h-40 sm:w-48 sm:h-48 p-2 rounded-full bg-[#0a0615]">
+                <div className="relative bg-gradient-to-r from-purple-500 via-purple-700 to-purple-900 w-full h-44 sm:h-72">
+                    <div className="absolute bottom-0 left-6 -mb-16 w-36 h-36 sm:w-48 sm:h-48 p-2 rounded-full bg-[#0a0615]">
                         <div className="w-full h-full flex justify-center items-center bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 text-white text-4xl sm:text-5xl font-semibold rounded-full">{acronymUser}</div>
                     </div>
                 </div>
@@ -236,7 +236,14 @@ export default function ProfilePage() {
                     </div>
                 )}
 
-                <div className="flex justify-between mt-10 mx-6">
+                <div className="mt-10 mx-6">
+                    <div className="flex justify-end items-center -mb-10">
+                        <Link href={"/profile/create-nft"}>
+                            <Button className="py-4 px-5 sm:py-6 sm:px-7 text-xs sm:text-sm bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 shadow-[0_0_5px_#a855f7] hover:from-purple-500 hover:via-purple-700 hover:to-purple-800 hover:shadow-[0_0_10px_#a855f7]">
+                                + Create NFT
+                            </Button>
+                        </Link>
+                    </div>
                     <Suspense fallback={
                         <div className="w-full h-20 animate-pulse bg-[#110823]/50 rounded-lg">
                             <div className="h-full flex items-center justify-center">
@@ -266,10 +273,6 @@ export default function ProfilePage() {
                             }}
                         />
                     </Suspense>
-                    <Link href={"/profile/create-nft"}>
-                        <Button className="py-4 px-5 sm:py-6 sm:px-7 text-xs sm:text-sm bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 
-                         shadow-[0_0_5px_#a855f7] hover:from-purple-500 hover:via-purple-700 hover:to-purple-800 hover:shadow-[0_0_10px_#a855f7]">+ Create NFT</Button>
-                    </Link>
                 </div>
             </div>
             <Footer />

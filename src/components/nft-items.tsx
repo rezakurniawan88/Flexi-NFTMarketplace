@@ -14,21 +14,23 @@ export default function NFTItems({ searchQuery = "" }: NFTItemsProps) {
     );
 
     return (
-        <div className="w-full flex flex-wrap gap-6 py-8 sm:py-10">
-            {listNFTIsLoading ? (
-                <SkeletonCard col={4} />
-            ) : filteredNfts.length > 0 ? (
-                filteredNfts.map((nft, index) => (
-                    <NFTCard
-                        key={index}
-                        nft={nft}
-                    />
-                ))
-            ) : (
-                <p className="font-semibold text-slate-300/50">
-                    {searchQuery ? `No results found for "${searchQuery}"` : "No NFTs found"}
-                </p>
-            )}
+        <div className="w-full overflow-x-auto py-8 sm:py-10">
+            <div className="flex gap-6 min-w-max px-2">
+                {listNFTIsLoading ? (
+                    <SkeletonCard col={4} />
+                ) : filteredNfts.length > 0 ? (
+                    filteredNfts.map((nft, index) => (
+                        <NFTCard
+                            key={index}
+                            nft={nft}
+                        />
+                    ))
+                ) : (
+                    <p className="font-semibold text-slate-300/50">
+                        {searchQuery ? `No results found for "${searchQuery}"` : "No NFTs found"}
+                    </p>
+                )}
+            </div>
         </div>
     );
 }

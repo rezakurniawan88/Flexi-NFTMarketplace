@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0a0615] relative overflow-hidden">
+    <main className="min-h-screen bg-[#0a0615] relative">
       <Header />
       <div className="px-8 sm:px-12 mt-8">
         <Jumbotron />

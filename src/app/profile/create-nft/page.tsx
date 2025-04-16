@@ -146,7 +146,7 @@ export default function CreateNFTPage() {
         <main className="bg-darkprimary">
             <Header />
             <div className="w-full flex flex-col sm:flex-row">
-                <div className="w-full sm:w-3/5 pt-8 sm:pt-10 pl-10 pr-10 sm:pr-0 sm:pl-24 pb-16">
+                <div className="w-full sm:w-3/5 pt-8 sm:pt-10 pl-8 pr-8 sm:pr-0 sm:pl-24 pb-16">
                     <h1 className="font-bold text-2xl sm:text-3xl mb-5 text-purple-500">Create NFT</h1>
                     <Form {...form}>
                         <form className="w-full pt-2 pb-2 space-y-3" encType="multipart/form-data">

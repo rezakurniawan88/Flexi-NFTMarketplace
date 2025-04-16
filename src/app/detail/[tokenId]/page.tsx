@@ -158,10 +158,10 @@ export default function DetailNFTPage({ params }: { params: Promise<{ tokenId: s
                     </div>
                     <div className="w-full sm:w-1/2 p-10 space-y-4">
                         <h1 className="font-bold text-3xl sm:text-4xl bg-gradient-to-r from-purple-300 to-purple-400 bg-clip-text text-transparent [text-shadow:_0_0_15px_#a855f730]">{NFTData?.name || "Title"}</h1>
-                        <p className="text-sm text-zinc-400">{NFTData?.description || "Description"}</p>
+                        <p className="text-sm text-zinc-400 break-words">{NFTData?.description || "Description"}</p>
                         <div>
                             <h1 className="font-bold bg-gradient-to-r from-purple-300 to-purple-400 bg-clip-text text-transparent [text-shadow:_0_0_15px_#a855f730]">Owner</h1>
-                            <h1 className="text-sm sm:text-base font-semibold text-gray-400">{NFTData?.owner || "0xaaaaaaaaaaaaaaaa"}</h1>
+                            <h1 className="text-sm sm:text-base font-semibold text-gray-400 break-words">{NFTData?.owner || "0xaaaaaaaaaaaaaaaa"}</h1>
                         </div>
                         <div className="flex justify-between items-center pt-20 sm:pt-36">
                             <div>
