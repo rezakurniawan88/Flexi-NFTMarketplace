@@ -124,7 +124,7 @@ export default function WalletSignIn() {
                                         return (
                                             <button
                                                 onClick={handleButtonClick}
-                                                className="bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 shadow-[0_0_10px_#a855f7] py-3 px-4 sm:px-5 text-xs sm:text-sm rounded-lg text-white cursor-pointer hover:from-purple-500 hover:via-purple-700 hover:to-purple-800"
+                                                className="bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 shadow-[0_0_10px_#a855f7] py-3 px-4 sm:px-5 text-xs sm:text-sm rounded-lg text-white cursor-pointer hover:from-purple-500 hover:via-purple-700 hover:to-purple-800 min-w-[120px] flex items-center justify-center"
                                             >
                                                 {signIsLoading ? <LucideLoader2 className="animate-spin" /> : isConnected && address ? "Sign" : "Connect Wallet"}
                                             </button>

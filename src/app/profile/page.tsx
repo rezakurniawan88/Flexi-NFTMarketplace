@@ -236,8 +236,8 @@ export default function ProfilePage() {
                     </div>
                 )}
 
-                <div className="mt-10 mx-6">
-                    <div className="flex justify-end items-center -mb-10">
+                <div className="relative mt-10 mx-6">
+                    <div className="absolute top-1 right-1 flex justify-end items-center mb-4">
                         <Link href={"/profile/create-nft"}>
                             <Button className="py-4 px-5 sm:py-6 sm:px-7 text-xs sm:text-sm bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 shadow-[0_0_5px_#a855f7] hover:from-purple-500 hover:via-purple-700 hover:to-purple-800 hover:shadow-[0_0_10px_#a855f7]">
                                 + Create NFT

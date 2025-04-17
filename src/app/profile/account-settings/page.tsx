@@ -66,17 +66,17 @@ export default function AccountSettingsPage() {
                     ) : (
                         <>
                             <div className="w-36 h-36 sm:w-40 sm:h-40 flex justify-center items-center bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 text-white text-4xl sm:text-5xl font-semibold rounded-full">{acronymUser}</div>
-                            <div className="space-y-3 sm:space-y-2.5 text-center sm:text-left">
-                                <h1 className="text-gray-400 font-bold text-2xl">{dataUser?.username || "Guest"}</h1>
+                            <div className="space-y-3 sm:space-y-2.5 text-center sm:text-left px-2 sm:px-0">
+                                <h1 className="text-gray-400 font-bold text-2xl mb-6 sm:mb-4">{dataUser?.username || "Guest"}</h1>
                                 <div className="text-left">
                                     <h1 className="text-gray-400 font-bold text-sm">Email :</h1>
-                                    <h1 className="text-gray-500 text-base">{dataUser?.email || "guest@email.com"}</h1>
+                                    <h1 className="text-gray-500 text-base break-all">{dataUser?.email || "guest@email.com"}</h1>
                                 </div>
                                 <div className="text-left">
                                     <h1 className="text-gray-400 font-bold text-sm">Wallet Address :</h1>
                                     <div className="flex items-center gap-1 mt-1">
-                                        <svg fill="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 -ml-1"><path d="M18.527 12.2062L12 16.1938L5.46875 12.2062L12 1L18.527 12.2062ZM12 17.4742L5.46875 13.4867L12 23L18.5312 13.4867L12 17.4742V17.4742Z" fill="gray"></path></svg>
-                                        <h1 className="text-gray-500 text-sm sm:text-lg w-fit">{dataUser?.walletAddress || "0x00a"}</h1>
+                                        <svg fill="gray" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 -ml-1 flex-shrink-0"><path d="M18.527 12.2062L12 16.1938L5.46875 12.2062L12 1L18.527 12.2062ZM12 17.4742L5.46875 13.4867L12 23L18.5312 13.4867L12 17.4742V17.4742Z" fill="gray"></path></svg>
+                                        <h1 className="text-gray-500 text-sm sm:text-lg break-all">{dataUser?.walletAddress || "0x00a"}</h1>
                                     </div>
                                 </div>
                             </div>
