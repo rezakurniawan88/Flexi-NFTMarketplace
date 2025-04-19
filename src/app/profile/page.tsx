@@ -224,7 +224,7 @@ export default function ProfilePage() {
                         <div className="bg-[#110823] w-2/3 sm:w-[40%] h-7 sm:h-10 rounded-md animate-pulse"></div>
                     </div>
                 ) : (
-                    <div className="mt-20 ml-6 space-y-2">
+                    <div className="mt-20 mx-6 space-y-2">
                         <h1 className="font-bold text-xl sm:text-2xl text-gray-300">{dataUser?.username || "Guest"}</h1>
                         <div>
                             <h1 className="text-gray-400 text-base sm:text-lg">{dataUser?.email || "guest@email.com"}</h1>

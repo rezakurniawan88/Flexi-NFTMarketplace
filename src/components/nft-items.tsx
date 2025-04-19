@@ -1,6 +1,7 @@
 import useNFTData from "@/hooks/useNFTData";
 import SkeletonCard from "./ui/card-skeleton";
 import NFTCard from "./nft-card";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 interface NFTItemsProps {
     searchQuery?: string;
@@ -14,23 +15,26 @@ export default function NFTItems({ searchQuery = "" }: NFTItemsProps) {
     );
 
     return (
-        <div className="w-full overflow-x-auto py-8 sm:py-10">
-            <div className="flex gap-6 min-w-max px-2">
-                {listNFTIsLoading ? (
-                    <SkeletonCard col={4} />
-                ) : filteredNfts.length > 0 ? (
-                    filteredNfts.map((nft, index) => (
-                        <NFTCard
-                            key={index}
-                            nft={nft}
-                        />
-                    ))
-                ) : (
-                    <p className="font-semibold text-slate-300/50">
-                        {searchQuery ? `No results found for "${searchQuery}"` : "No NFTs found"}
-                    </p>
-                )}
+        <ScrollArea className="w-full my-8 sm:my-10">
+            <div className="w-full">
+                <div className="flex gap-6 min-w-max px-2">
+                    {listNFTIsLoading ? (
+                        <SkeletonCard col={4} />
+                    ) : filteredNfts.length > 0 ? (
+                        filteredNfts.map((nft, index) => (
+                            <NFTCard
+                                key={index}
+                                nft={nft}
+                            />
+                        ))
+                    ) : (
+                        <p className="font-semibold text-slate-300/50">
+                            {searchQuery ? `No results found for "${searchQuery}"` : "No NFTs found"}
+                        </p>
+                    )}
+                </div>
             </div>
-        </div>
+            <ScrollBar orientation="horizontal" />
+        </ScrollArea>
     );
 }

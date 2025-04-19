@@ -8,7 +8,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { useAccount, useSignMessage, useWaitForTransactionReceipt, useWriteContract } from "wagmi";
-import { uploadFileToIPFS, uploadJSONToIPFS } from "@/utils/ipfs";
 import { NFTMarketplaceABI } from "@/utils/abi/NFTMarketplaceABI";
 import { ethers } from "ethers";
 import { LucideLoader2, LucideXCircle } from "lucide-react";
@@ -17,6 +16,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useEffect, useState, useRef } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { sepolia } from "viem/chains";
+import { axiosInstance } from "@/lib/axios";
 
 export default function CreateNFTPage() {
     const { isConnected } = useAccount();
@@ -89,7 +89,17 @@ export default function CreateNFTPage() {
 
             await signMessageAsync({ message: "Confirm NFT minting" })
 
-            const imageURI = await uploadFileToIPFS(values.nftImage[0])
+            const formData = new FormData();
+            formData.append("file", values.nftImage[0]);
+
+            const imageURI = await axiosInstance.post("/ipfs/upload-file-to-ipfs", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                }
+            }).then((res) => {
+                return res?.data?.ipfsHash
+            });
+
             if (!imageURI) {
                 throw new Error("Failed to upload image to IPFS")
             }
@@ -100,7 +110,10 @@ export default function CreateNFTPage() {
                 image: imageURI,
             }
 
-            const metadataURI = await uploadJSONToIPFS(metadata)
+            const metadataURI = await axiosInstance.post("/ipfs/upload-json-to-ipfs", { metadata }).then((res) => {
+                return res?.data?.ipfsHash
+            })
+
             if (!metadataURI) {
                 throw new Error("Failed to upload metadata to IPFS")
             }
