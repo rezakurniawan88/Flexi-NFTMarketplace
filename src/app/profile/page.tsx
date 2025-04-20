@@ -209,11 +209,11 @@ export default function ProfilePage() {
     }, [nfts, address]);
 
     return (
-        <main className="w-full h-full bg-[#0a0615]">
+        <main className="w-full h-full bg-darkprimary pt-20">
             <Header />
-            <div className="bg-[#0a0615] w-full">
+            <div className="bg-darkprimary w-full">
                 <div className="relative bg-gradient-to-r from-purple-500 via-purple-700 to-purple-900 w-full h-44 sm:h-72">
-                    <div className="absolute bottom-0 left-6 -mb-16 w-36 h-36 sm:w-48 sm:h-48 p-2 rounded-full bg-[#0a0615]">
+                    <div className="absolute bottom-0 left-6 -mb-16 w-36 h-36 sm:w-48 sm:h-48 p-2 rounded-full bg-darkprimary">
                         <div className="w-full h-full flex justify-center items-center bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 text-white text-4xl sm:text-5xl font-semibold rounded-full">{acronymUser}</div>
                     </div>
                 </div>

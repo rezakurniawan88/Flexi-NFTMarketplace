@@ -16,7 +16,7 @@ export default function NFTItems({ searchQuery = "" }: NFTItemsProps) {
 
     return (
         <ScrollArea className="w-full my-8 sm:my-10">
-            <div className="w-full">
+            <div className="w-full py-6">
                 <div className="flex gap-6 min-w-max px-2">
                     {listNFTIsLoading ? (
                         <SkeletonCard col={4} />

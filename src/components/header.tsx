@@ -24,7 +24,7 @@ export default function Header() {
     };
 
     return (
-        <header className="sticky top-0 left-0 right-0 z-50 bg-[#13082a]/80 backdrop-blur-xl border-purple-900/30 border-b-[1px]">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#13082a]/80 backdrop-blur-xl border-purple-900/30 border-b-[1px]">
             <nav className="flex items-center justify-between p-5 sm:px-12 sm:py-6">
                 <div className="hidden sm:flex items-center gap-8">
                     <Link href="/" className="text-2xl font-bold text-purple-700"

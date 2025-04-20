@@ -156,7 +156,7 @@ export default function CreateNFTPage() {
     }
 
     return (
-        <main className="bg-darkprimary">
+        <main className="bg-darkprimary pt-20">
             <Header />
             <div className="w-full flex flex-col sm:flex-row">
                 <div className="w-full sm:w-3/5 pt-8 sm:pt-10 pl-8 pr-8 sm:pr-0 sm:pl-24 pb-16">

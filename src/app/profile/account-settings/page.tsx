@@ -49,7 +49,7 @@ export default function AccountSettingsPage() {
     })
 
     return (
-        <main className="min-h-screen bg-[#0a0615] text-white">
+        <main className="min-h-screen bg-darkprimary text-white pt-20">
             <Header />
             <div className="mx-8 sm:mx-12 my-6 sm:my-10">
                 <h1 className="font-bold text-2xl sm:text-3xl text-purple-500 mb-6 sm:mb-10">Account Settings</h1>

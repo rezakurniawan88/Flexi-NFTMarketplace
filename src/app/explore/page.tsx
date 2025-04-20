@@ -8,7 +8,7 @@ import { Suspense } from "react";
 
 export default function ExplorePage() {
     return (
-        <main className="bg-[#0a0615]">
+        <main className="bg-darkprimary pt-20">
             <Header />
             <Suspense fallback={
                 <div className="px-8 sm:px-12 mt-10">

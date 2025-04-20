@@ -125,7 +125,7 @@ export default function DetailNFTPage({ params }: { params: Promise<{ tokenId: s
     }, [nft]);
 
     return (
-        <main className="bg-[#0a0615]">
+        <main className="bg-darkprimary pt-20">
             <Header />
             <h1 className="text-3xl font-bold pl-8 sm:pl-16 mt-8 text-purple-500">Detail NFT</h1>
             {listNFTIsLoading ? (
@@ -171,7 +171,7 @@ export default function DetailNFTPage({ params }: { params: Promise<{ tokenId: s
                             <Button onClick={() => setIsBuyModalOpen(true)} className="py-6 w-2/3 sm:w-[70%] rounded-xl bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 
                          shadow-[0_0_10px_#a855f7] hover:shadow-[0_0_15px_#a855f7] hover:from-purple-500 hover:via-purple-700 hover:to-purple-800 transition-all duration-300">Buy now</Button>
                             <Dialog open={isBuyModalOpen} onOpenChange={setIsBuyModalOpen}>
-                                <DialogContent className="bg-[#0a0615] border border-slate-900 text-gray-200">
+                                <DialogContent className="bg-darkprimary border border-slate-900 text-gray-200">
                                     <DialogHeader>
                                         <DialogTitle className="text-xl font-bold text-purple-300">Are you sure you want to buy?</DialogTitle>
                                     </DialogHeader>
